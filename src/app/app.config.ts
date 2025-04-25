@@ -9,8 +9,12 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 
 
+
+
+
 export const appConfig: ApplicationConfig = {
   providers: [
+blogsListFront
     provideZoneChangeDetection({ eventCoalescing: true }),
      provideRouter(routes),
       provideClientHydration(withEventReplay()),
@@ -23,4 +27,7 @@ export const appConfig: ApplicationConfig = {
         appId: "1:891879746875:web:c68a78e043949e8d55db1e" })), 
       provideAuth(() => getAuth()), 
       provideFirestore(() => getFirestore())]
+
+  ]
+
 };
