@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { FormControl, FormGroup } from '@angular/forms';
+import { PostServiceService } from '../../../core/services/post-service.service';
+import { response } from 'express';
 
 @Component({
   selector: 'app-post-list',
@@ -7,6 +10,8 @@ import { RouterLink } from '@angular/router';
   templateUrl: './post-list.component.html',
   styleUrl: './post-list.component.css'
 })
-export class PostListComponent {
+export class PostListComponent  {
+
+ constructor(){}
 
 }
