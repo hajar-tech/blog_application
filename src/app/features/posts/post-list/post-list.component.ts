@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './post-list.component.css'
 })
 export class PostListComponent  {
+  searchCategory: string = '';
 
   private postService = inject(PostServiceService);
 
@@ -21,6 +22,10 @@ export class PostListComponent  {
 
   constructor() {
     this.articles$ = this.postService.getArticles();
+  }
+
+  onSearch(value: string) {
+    this.searchCategory = value.trim().toLowerCase();
   }
 
  // ngOnInit() {}
