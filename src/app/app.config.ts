@@ -6,6 +6,7 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 
 
@@ -14,13 +15,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
      provideRouter(routes),
       provideClientHydration(withEventReplay()),
-      provideFirebaseApp(() => initializeApp({ 
-        apiKey: "AIzaSyDleoIDUsechtJUOUAgFtPAyFfAqt3D3QA",
-        authDomain: "blog-app-5d285.firebaseapp.com",
-        projectId: "blog-app-5d285",
-        storageBucket: "blog-app-5d285.firebasestorage.app",
-        messagingSenderId: "891879746875",
-        appId: "1:891879746875:web:c68a78e043949e8d55db1e" })), 
+      provideFirebaseApp(() => initializeApp(environment.firebaseConfig)), 
       provideAuth(() => getAuth()), 
       provideFirestore(() => getFirestore())]
 };
