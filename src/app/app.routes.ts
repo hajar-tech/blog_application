@@ -20,10 +20,9 @@ export const routes: Routes = [
         path: 'post-list',
         component: PostListComponent
     },
-    {
-        path: 'post-detail',
-        component: PostDetailComponent
-    },
+    { path: 'post-detail/:id', component: PostDetailComponent
+        
+     },
     {
         path: 'post-form',
         component: PostFormComponent
