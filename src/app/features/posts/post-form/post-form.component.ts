@@ -28,12 +28,12 @@ export class PostFormComponent {
       return;
     }
 
-    const articleData = this.formular.value as Article;
+    const articleData = this.formular.value as Article;//core/models/article.ts(interface)
 
     try {
       await this.postService.addArticle(articleData);
       alert('Article successfully published!');
-      this.formular.reset();
+      this.formular.reset();//vider la form
     } catch (error) {
       console.error('Error saving article:', error);
     }
