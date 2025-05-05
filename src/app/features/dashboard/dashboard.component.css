@@ -1,0 +1,17 @@
+
+.post-card {
+    transition: all 0.3s ease;
+  }
+  
+  .post-card:hover {
+    transform: scale(1.05);
+  }
+  
+  button {
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  

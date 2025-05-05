@@ -18,16 +18,17 @@ export class PostListComponent  {
 
   private postService = inject(PostServiceService);
 
-  articles$: Observable<Article[]>; // Observable des articles
-
+  articles$: Observable<Article[]>;
+//inject post service pour obtenir une instance du service PostServiceService
   constructor() {
     this.articles$ = this.postService.getArticles();
   }
 
   onSearch(value: string) {
+    //stocker les valeur dans searchCategory pour filterer apris
     this.searchCategory = value.trim().toLowerCase();
   }
 
- // ngOnInit() {}
+ 
 
 }
